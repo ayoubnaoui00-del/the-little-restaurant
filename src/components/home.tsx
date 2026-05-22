@@ -1,6 +1,7 @@
-import { Color } from 'expo-router';
+import { Color, router } from 'expo-router';
 import React from 'react';
-import { Image, ScrollView, View, Text, StyleSheet } from 'react-native';
+import { Image, ScrollView, View, Text, StyleSheet, Pressable, TouchableOpacity } from 'react-native';
+
 
 export default function Home() {
     return (
@@ -12,9 +13,9 @@ export default function Home() {
                 
             </View>
             <View style={styles.container}>
-                <View>
-                    <Text style={styles.text}>The Small Souk</Text>    
-                </View>
+                
+                    <TouchableOpacity onPress={()=> router.push( '/Menu' )}><Text style={styles.text}>The Small Souk </Text></TouchableOpacity>    
+                
             </View>
             <View style={styles.dividerContainer}>
               <Image 
